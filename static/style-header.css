@@ -1,0 +1,60 @@
+/* ESTILOS GERAIS */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #f0f0f0;
+}
+
+/* ESTILO HEADER */
+header{
+    background-color: #339566;
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ESTILO LOGO */
+header .logo-nav img{
+    height: 80px;
+}
+
+header .logo-nav .texto-nav h1{
+    font-family: "inter";
+    font-weight: 900;
+}
+
+header .logo-nav .texto-nav p{
+    font-family: "inter";
+    font-weight: 100;
+}
+
+header .logo-nav{
+    display: flex;
+    align-items: center;
+    color: #f0f0f0;
+    padding: 10px;
+}
+
+/* ESTILO NAV */
+
+header nav ul li{
+    display: inline-block;
+    padding: 0px 20px;
+    transition: 0.2s;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    font-family: "inter";
+    font-weight: 500;
+    color: #f0f0f0;
+}
+
+header nav ul li:hover{
+    transform: scale(1.05);
+}

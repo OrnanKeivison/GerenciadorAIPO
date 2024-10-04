@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIPO</title>
+    <link rel="icon" href="./imagens/logo.png">
+
+    <link rel="stylesheet" href="../static/style-form.css">
+    <link rel="stylesheet" href="../static/style-header.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-nav">
+            <img src="../static/images/logo.png" alt="">
+            <div class="texto-nav">
+                <h1>AIPO</h1>
+                <P>Sistema de acesso inteligente a portas.</P>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="">Projeto</a></li>
+                <li><a href="">Controle de Acesso</a></li>
+                <li><a href="">Cadastro de Acesso</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <h1>Cadastrar Usuário</h1>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul>
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        
+        <form method="POST" action="/cadastrar_usuario">
+            <div class="campo">
+                <label for="matricula">Matrícula:</label><br>
+                <input type="text" id="matricula" name="matricula" required><br><br>
+            </div>
+            <div class="campo">
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" required><br><br>
+            </div>
+            <div class="campo">
+                <label for="senha">Senha:</label><br>
+                <input type="password" id="senha" name="senha" required><br><br>
+            </div>
+            <div class="campo">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+            </div>
+            <div class="campo">
+                <label for="codigo">Código:</label><br>
+                <input type="text" id="codigo" name="codigo" required><br><br>
+            </div>
+
+            <div class="campo">
+                <label for="idPerfil">Perfil:</label><br>
+                <select id="idPerfil" name="idPerfil" required>
+                    <option value="">Selecione um perfil</option>
+                    {% for perfil in perfis %}
+                        <option value="{{ perfil[0] }}">{{ perfil[1] }}</option>
+                    {% endfor %}
+                </select><br><br>
+            </div>
+            
+            <div class="btn">
+                <input type="submit" value="Cadastrar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

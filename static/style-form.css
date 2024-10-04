@@ -1,0 +1,91 @@
+/* ESTILOS GERAIS */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #f0f0f0;
+}
+
+/* ESTILO FORMULÁRIOS */
+.container {
+    width: 30%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    text-align: center;
+    color: #333;
+    font-family: "inter";
+    margin-bottom: 20px;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    font-size: 16px;
+    color: #555;
+    font-family: "inter";
+}
+
+.campo input, .campo select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    font-family: "inter";
+}
+
+.btn input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #339566;
+    color: white;
+    font-size: 16px;
+    font-family: "inter";
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn input[type="submit"]:hover {
+    background-color: #339566ba;
+}
+
+
+/* ESTILO MENSAGEM DE ERRO FLASH */
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 30px auto;
+}
+
+li {
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: "inter";
+    font-size: 16px;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
